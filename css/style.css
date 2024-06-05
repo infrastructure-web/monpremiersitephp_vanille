@@ -1,6 +1,11 @@
-h1 { color: red; }	
+h1 { color: rgb(31, 1, 79); }	
+h2 { color: rgb(48, 32, 85); }	
 
-table td {
-    border :1px solid black;
+table {
     border-collapse: collapse;
+}
+
+table, td, th {
+    border: 1px solid;
+    padding:5px 10px;
 }

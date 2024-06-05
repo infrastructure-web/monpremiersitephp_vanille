@@ -17,19 +17,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accueil</title>
+    <title>Liste des clients</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1>Accueil</h1>
-
-    <h2>Affichage des produits en format "textuel"</h2>
+    <h1>Liste des clients</h1>
     <?php
-        $res = $mysqli->query("SELECT nom, prix_vente, qte_stock FROM produits ORDER BY nom;");
-        while ($row = $res->fetch_assoc()) {
-            echo  "<p>" . $row["nom"] . " : " . $row["prix_vente"] . "$, " . $row["qte_stock"] . " items(s) en stock<p>";
-        }
+        $res = $mysqli->query("SELECT * FROM clients ORDER BY nom, prenom;");
     ?>
+
+    <ul>
+        <?php
+            while ($row = $res->fetch_assoc()) {
+        ?>
+            <li>
+                <?= $row['nom'] ?>,  <?= $row['prenom'] ?>
+            </li>
+        <?php
+            }
+        ?>
+    </ul>
+    
+    <div>
+        <ul> 
+            <li><a href="index.php">Accueil : index.php</a></li>
+            <li><a href="produits_tableau.php">Affichage des produits dans un tableau (table) : produits_tableau.php</a></li>
+            <li><a href="clients_liste.php">Affichage des clients dans une liste (ul) : clients_liste.php</a></li>
+        </ul>
+    </div>
 
     <div>
         <ul> 
