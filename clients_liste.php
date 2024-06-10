@@ -27,9 +27,7 @@
     ?>
 
     <ul>
-        <?php
-            while ($row = $res->fetch_assoc()) {
-        ?>
+        <?php while ($row = $res->fetch_assoc()) { ?>
             <li>
                 <?= $row['nom'] ?>,  <?= $row['prenom'] ?>
             </li>
@@ -37,21 +35,8 @@
             }
         ?>
     </ul>
-    
-    <div>
-        <ul> 
-            <li><a href="index.php">Accueil : index.php</a></li>
-            <li><a href="produits_tableau.php">Affichage des produits dans un tableau (table) : produits_tableau.php</a></li>
-            <li><a href="clients_liste.php">Affichage des clients dans une liste (ul) : clients_liste.php</a></li>
-        </ul>
-    </div>
 
-    <div>
-        <ul> 
-            <li><a href="produits_tableau.php">Affichage des produits dans un tableau (table)</a></li>
-            <li><a href="clients_liste.php">Affichage des clients dans une liste (ul)</a></li>
-        </ul>
-    </div>
+    <p><a href="index.php">Retour à l'accueil</a></p>
 
 
 <?php

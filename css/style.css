@@ -1,3 +1,15 @@
+html, body {
+    margin:0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+}
+
 h1 { color: rgb(31, 1, 79); }	
 h2 { color: rgb(48, 32, 85); }	
 
@@ -8,4 +20,58 @@ table {
 table, td, th {
     border: 1px solid;
     padding:5px 10px;
+    max-width: 500px;
+    margin:auto;
 }
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+ul {
+    padding: 0;
+    max-width: 200px;
+    margin:auto;
+}
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    max-width: 300px;
+    padding:2px;
+    margin:5px;
+}
+
+.card img {
+    width:100%;
+}
+
+form {
+    margin: 20px auto;
+}
+
+form div {
+    margin: 10px;
+}
+
+form label {
+    display: block;
+} 
+
+form input {
+    max-width: 200px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #000; 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
