@@ -9,7 +9,7 @@
   <body>
 	<div>
 		<h1>Ajouter un produit</h1>
-		<form>
+		<form method="POST" action="">
       <div>
         <label for="nom">Nom du produit *</label>
         <!-- Attention! Vos validations doivent être cohérentes avec le champ correspondant dans la BD! -->
@@ -18,9 +18,9 @@
       
       <div class="flex">
         <div>
-          <label for="prix_unitaire">Prix coûtant *</label>
+          <label for="prix_coutant">Prix coûtant *</label>
           <!-- Attention! Vos validations doivent être cohérentes avec le champ correspondant dans la BD! -->
-          <input type="number" step=".01" class="form-control" id="prix_unitaire" name="prix_unitaire" required>
+          <input type="number" step=".01" class="form-control" id="prix_coutant" name="prix_coutant" required>
         </div>
 
         <div>

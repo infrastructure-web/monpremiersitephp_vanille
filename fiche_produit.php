@@ -1,3 +1,8 @@
+<?php
+  //include_once "include/config.php";
+  //echo $_GET['id'];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
