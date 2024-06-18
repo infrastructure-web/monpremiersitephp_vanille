@@ -34,13 +34,15 @@
     <h2>Affiche des produits en format "carte"</h2>
     <div class="flex">     
         <?php
-            $res = $mysqli->query("SELECT nom, prix_vente, qte_stock FROM produits ORDER BY nom;");
+            $res = $mysqli->query("SELECT id, nom, prix_vente, qte_stock FROM produits ORDER BY nom;");
             while ($row = $res->fetch_assoc()) {
         ?>
         <div class="card">
             <img src="https://picsum.photos/id/63/200/300" alt="Photo d'un produit">
             <h3><?= $row["nom"] ?></h3>
-            <p><a href="fiche_produit.php">Détail</a></p>
+            <p><a href="fiche_produit.php?id=<?= $row["id"] ?>">Détail</a></p>
+            <p><a href="miseajour_produit.php?id=<?= $row["id"] ?>">Modifier</a></p>
+            <p><a href="suppression_produit.php?id=<?= $row["id"] ?>">Supprimer</a></p>
         </div>
 
         <?php

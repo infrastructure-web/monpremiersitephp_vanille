@@ -65,7 +65,8 @@ form input {
     box-sizing: border-box;
 }
 
-button {
+button, .button {
+    display:block;
     background-color: #000; 
     border: none;
     color: white;
