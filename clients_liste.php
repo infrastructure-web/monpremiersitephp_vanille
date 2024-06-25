@@ -40,7 +40,7 @@
     <?php
         $res = $mysqli->query("SELECT * FROM clients ORDER BY nom, prenom;");
     ?>
-    <select>
+    <select name="client_id">
         <?php while ($row = $res->fetch_assoc()) { ?>
             <option value="<?= $row['id'] ?>">
                 <?= $row['nom'] ?>,  <?= $row['prenom'] ?>
