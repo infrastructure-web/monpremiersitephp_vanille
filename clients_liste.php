@@ -36,6 +36,20 @@
         ?>
     </ul>
 
+    <h2>Liste déroulante</h2>
+    <?php
+        $res = $mysqli->query("SELECT * FROM clients ORDER BY nom, prenom;");
+    ?>
+    <select>
+        <?php while ($row = $res->fetch_assoc()) { ?>
+            <option value="<?= $row['id'] ?>">
+                <?= $row['nom'] ?>,  <?= $row['prenom'] ?>
+            </option>
+        <?php
+            }
+        ?>
+    </select>
+
     <p><a href="index.php">Retour à l'accueil</a></p>
 
 

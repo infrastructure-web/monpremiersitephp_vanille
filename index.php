@@ -180,7 +180,8 @@
     
     <h2>Autres affichages</h2>
     <div><a href="produits_tableau.php">Affichage des produits dans un tableau (table)</a></div>
-    <div><a href="clients_liste.php">Affichage des clients dans une liste (ul)</a></div>
+    <div><a href="clients_liste.php">Affichage des clients dans une liste (ul et select)</a></div>
+    <br>
 
 <?php
     $mysqli->close(); // Fermeture de la connexion
