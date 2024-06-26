@@ -44,7 +44,7 @@
 
     if ($requete = $mysqli->prepare("SELECT * FROM produits WHERE id=?")) {  // Création d'une requête préparée 
 
-      $requete->bind_param("s", $_GET['id']); // Envoi des paramètres à la requête
+      $requete->bind_param("i", $_GET['id']); // Envoi des paramètres à la requête
       $requete->execute(); // Exécution de la requête
 
       $result = $requete->get_result(); // Récupération de résultats de la requête

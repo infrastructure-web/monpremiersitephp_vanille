@@ -16,17 +16,17 @@ if($_SERVER['REQUEST_METHOD'] === 'GET') {
         exit();
     } 
 
-    if ($requete = $mysqli->prepare("SELECT * FROM produits WHERE id=?")) {  // Création d'une requête préparée 
+    if ($requete = $mysqli->prepare("SELECT * FROM clients WHERE id=?")) {  // Création d'une requête préparée 
 
       $requete->bind_param("i", $_GET['id']); // Envoi des paramètres à la requête
       $requete->execute(); // Exécution de la requête
 
       $result = $requete->get_result(); // Récupération de résultats de la requête
-      $produit = $result->fetch_assoc(); // Récupération de l'enregistrement
+      $client = $result->fetch_assoc(); // Récupération de l'enregistrement
       
       // afficher le produit au format JSON
-      if($produit) {
-        echo json_encode($produit);
+      if($client) {
+        echo json_encode($client);
       }
 
       $requete->close(); // Fermeture du traitement 

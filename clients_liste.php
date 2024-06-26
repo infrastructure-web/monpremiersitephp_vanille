@@ -39,7 +39,11 @@
     <h2>Liste déroulante</h2>
     <?php
         $res = $mysqli->query("SELECT * FROM clients ORDER BY nom, prenom;");
+
+        // $_POST["client_id"]
     ?>
+
+
     <select name="client_id">
         <?php while ($row = $res->fetch_assoc()) { ?>
             <option value="<?= $row['id'] ?>">
